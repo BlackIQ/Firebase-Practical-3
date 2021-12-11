@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:multifirebaseauthentication/app/widgets/buttons/icon_button.dart';
+import 'package:multifirebaseauthentication/app/widgets/buttons/wide_button.dart';
+import 'package:multifirebaseauthentication/app/widgets/fields/wide_field.dart';
 
 class AccountScreen extends StatefulWidget {
   @override
@@ -32,14 +35,11 @@ class _AccountScreenState extends State<AccountScreen> {
                   ),
                 ),
                 SizedBox(height: 5),
-                TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Email',
-                    hintText: 'john@due.com',
-                  ),
+                WideField(
                   controller: _loginEmail,
-                  obscureText: false,
+                  label: 'Email',
+                  hint: 'john@due.com',
+                  obsecure: true,
                 ),
                 SizedBox(height: 15),
                 Text(
@@ -49,72 +49,42 @@ class _AccountScreenState extends State<AccountScreen> {
                   ),
                 ),
                 SizedBox(height: 5),
-                TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Password',
-                    hintText: '********',
-                  ),
+                WideField(
                   controller: _loginPassword,
-                  obscureText: true,
-                ),
-                SizedBox(height: 20),
-                Container(
-                  height: 50,
-                  child: RaisedButton(
-                    textColor: Colors.white,
-                    color: Colors.red,
-                    onPressed: () {},
-                    child: Center(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          FaIcon(FontAwesomeIcons.google),
-                          Text('Continue with Google'),
-                        ],
-                      ),
-                    ),
-                  ),
+                  label: 'Password',
+                  hint: '********',
+                  obsecure: true,
                 ),
                 SizedBox(height: 10),
-                Container(
-                  height: 50,
-                  child: RaisedButton(
-                    textColor: Colors.white,
-                    color: Colors.grey,
-                    onPressed: () {},
-                    child: Center(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          FaIcon(FontAwesomeIcons.userSecret),
-                          Text('Continue as guest user'),
-                        ],
-                      ),
-                    ),
-                  ),
+                WideButton(
+                  clicked: () {},
+                  color: Colors.deepOrange,
+                  text: 'Login',
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 30),
                 Center(
-                  child: Text('Or'),
+                  child: Text('Or login with other accounts'),
                 ),
-                SizedBox(height: 15),
-                Container(
-                  height: 50,
-                  child: RaisedButton(
-                    textColor: Colors.white,
-                    color: Colors.green,
-                    onPressed: () {},
-                    child: Center(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          FaIcon(FontAwesomeIcons.userPlus),
-                          Text('Register with Email'),
-                        ],
-                      ),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    SqIconButton(
+                      icon: FontAwesomeIcons.google,
+                      color: Colors.red,
+                      clicked: () {},
                     ),
-                  ),
+                    SqIconButton(
+                      icon: FontAwesomeIcons.userSecret,
+                      color: Colors.grey,
+                      clicked: () {},
+                    ),
+                    SqIconButton(
+                      icon: FontAwesomeIcons.userPlus,
+                      color: Colors.green,
+                      clicked: () {},
+                    ),
+                  ],
                 ),
               ],
             ),
