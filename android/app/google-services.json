@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "209680619885",
+    "project_id": "multifirebaseauthentication",
+    "storage_bucket": "multifirebaseauthentication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209680619885:android:7e118049e0ef103efee264",
+        "android_client_info": {
+          "package_name": "ir.blackiq.multifirebaseauthentication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "209680619885-167aa0df44goqnpri51tn6rvtkqennrr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ir.blackiq.multifirebaseauthentication",
+            "certificate_hash": "cd8ed2d444f3302843ebf1491640844a645932f5"
+          }
+        },
+        {
+          "client_id": "209680619885-7um51mkv38fs1tt3na4l7k59l7s6akmn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxsyIKDUStokcySmL1Q2T7a-Z2JyJCQWY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "209680619885-7um51mkv38fs1tt3na4l7k59l7s6akmn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
