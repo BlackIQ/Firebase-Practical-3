@@ -13,9 +13,10 @@ class MyApp extends StatelessWidget {
       value: AuthService().user,
       builder: (context, snapshot) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Multi Firebase Authentication',
           theme: ThemeData(
-            primarySwatch: Colors.purple,
+            primarySwatch: Colors.deepOrange,
           ),
           home: Landing(),
         );
