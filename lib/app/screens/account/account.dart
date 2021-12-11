@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:multifirebaseauthentication/app/services/authentication.dart';
 import 'package:multifirebaseauthentication/app/widgets/buttons/icon_button.dart';
 import 'package:multifirebaseauthentication/app/widgets/buttons/wide_button.dart';
 import 'package:multifirebaseauthentication/app/widgets/fields/wide_field.dart';
@@ -10,12 +11,17 @@ class AccountScreen extends StatefulWidget {
 }
 
 class _AccountScreenState extends State<AccountScreen> {
+  final AuthService _auth = AuthService();
+
   @override
   Widget build(BuildContext context) {
     TextEditingController _loginEmail = TextEditingController();
     TextEditingController _loginPassword = TextEditingController();
 
-    void Register() {
+    TextEditingController _registerEmail = TextEditingController();
+    TextEditingController _registerPassword = TextEditingController();
+
+    void odalRegister() {
       showModalBottomSheet(
         context: context,
         builder: (context) {
@@ -42,7 +48,7 @@ class _AccountScreenState extends State<AccountScreen> {
                   ),
                   SizedBox(height: 5),
                   WideField(
-                    controller: _loginEmail,
+                    controller: _registerEmail,
                     label: 'Email',
                     hint: 'john@due.com',
                     obsecure: true,
@@ -56,16 +62,16 @@ class _AccountScreenState extends State<AccountScreen> {
                   ),
                   SizedBox(height: 5),
                   WideField(
-                    controller: _loginPassword,
+                    controller: _registerPassword,
                     label: 'Password',
                     hint: '********',
                     obsecure: true,
                   ),
                   SizedBox(height: 20),
                   WideButton(
-                    clicked: () {},
+                    clicked: () async {},
                     color: Colors.deepOrange,
-                    text: 'Login',
+                    text: 'Register',
                   ),
                 ],
               ),
@@ -131,18 +137,23 @@ class _AccountScreenState extends State<AccountScreen> {
                     SqIconButton(
                       icon: FontAwesomeIcons.google,
                       color: Colors.red,
-                      clicked: () {},
+                      clicked: () async {},
                     ),
                     SqIconButton(
                       icon: FontAwesomeIcons.userSecret,
                       color: Colors.grey,
-                      clicked: () {},
+                      clicked: () async {
+                        dynamic result = await _auth.signinAnon();
+                        if (result.runtimeType == List) {
+                          print(result[1]);
+                        }
+                      },
                     ),
                     SqIconButton(
                       icon: FontAwesomeIcons.userPlus,
                       color: Colors.green,
                       clicked: () {
-                        Register();
+                        odalRegister();
                       },
                     ),
                   ],
