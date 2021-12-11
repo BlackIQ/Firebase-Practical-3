@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:multifirebaseauthentication/app/screens/landing.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,16 +11,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.lightBlue,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Hi'),
-        ),
-        body: Center(
-          child: Text(
-            'Center text'
-          ),
-        ),
-      ),
+      home: Landing(),
     );
   }
 }
