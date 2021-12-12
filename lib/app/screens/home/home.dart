@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:multifirebaseauthentication/app/models/user.dart';
 import 'package:multifirebaseauthentication/app/screens/home/settings.dart';
 import 'package:multifirebaseauthentication/app/screens/home/tabs/account.dart';
+import 'package:multifirebaseauthentication/app/screens/home/tabs/feed.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -22,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Scaffold(
           appBar: AppBar(
             elevation: 0,
-            title: Text('Home screen'),
+            title: Text('Welcome back'),
             actions: [
               FlatButton(
                 onPressed: () {
@@ -59,9 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           body: TabBarView(
             children: [
-              Center(
-                child: Text('Coffee'),
-              ),
+              FeedTab(),
               Center(
                 child: Text('Plus'),
               ),
