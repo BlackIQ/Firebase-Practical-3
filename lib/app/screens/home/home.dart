@@ -17,6 +17,9 @@ class _HomeScreenState extends State<HomeScreen> {
     final user = Provider.of<User>(context);
 
     return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.deepOrange,
+      ),
       debugShowCheckedModeBanner: false,
       home: DefaultTabController(
         length: 3,
@@ -49,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Container(
                   margin: EdgeInsets.all(10),
-                  child: FaIcon(FontAwesomeIcons.chartLine),
+                  child: FaIcon(FontAwesomeIcons.plus),
                 ),
                 Container(
                   margin: EdgeInsets.all(10),
