@@ -88,7 +88,7 @@ class _AccountScreenState extends State<AccountScreen> {
       body: Center(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(25),
+            padding: EdgeInsets.all(25),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -137,7 +137,12 @@ class _AccountScreenState extends State<AccountScreen> {
                     SqIconButton(
                       icon: FontAwesomeIcons.google,
                       color: Colors.red,
-                      clicked: () async {},
+                      clicked: () async {
+                        dynamic result = await _auth.signinGoogle();
+                        if (result.runtimeType == List) {
+                          print(result[1]);
+                        }
+                      },
                     ),
                     SqIconButton(
                       icon: FontAwesomeIcons.userSecret,
