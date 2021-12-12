@@ -1,16 +1,73 @@
-# multifirebaseauthentication
+# Google Firestore Services
 
-Multi Firebase Authentication
+**Note: Some parts are not committed and they are on working.**
 
-## Getting Started
+It this practical project we learned **Firebstore Cloud NoSQL Database**. You know it is similar to Instagram.
 
-This project is a starting point for a Flutter application.
+### Lessons and what we covered
 
-A few resources to get you started if this is your first Flutter project:
+In previous practical projects ([Second Firebase Practical Project](https://github.com/BlackIQ/Firebase-Practical-2)) we just learned about these things:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- Flutter
+- Alert dialog for logout
+- Bottom navigation bar
+- Settings to show user image and other stuff
+- Firebase setup
+- Setup for iOS
+- Firebase Authentications
+- Google Authentication
+- Access to user objects
+  - Name
+  - Photo
+  - Email
+  - Phone
+- Firebase Firestore
+- Read date with specific query
+- Update a document
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+But in this project we cover more lessons. Like:
+
+- Flutter
+- Theme and settings for theme
+- Dark and light mode
+- Using GoogleFonts
+- Firebase Authentication
+- Apple Authentication
+- Github Authentication
+- Twitter Authentication
+- Firebase Firestore
+- Deep dive in Firestore and lots of new stuff for it
+- Firebase Real-Time
+- Take a short look of what is **Firebase real-time database**
+
+### Images
+
+Here are some images that you can see.
+
+_Images will be added_
+
+### TODOs
+
+- [ ] Insert a new user by user
+- [ ] Setup specific page for Github users that can review people also from app
+- [ ] Add more screenshots of application
+
+### Next practical project?
+
+Really dont know anythings and have no idea for next practical project but I am thinking for more UI development in **Cupertino**. Next practical project will be just created for **iOS**.
+
+We also need to learn **Firebase Cloud Storage**.
+
+In next project we will cover some new **Firebase** features that didn't created before. Like a messenger. In this case we will learn these topics:
+
+- Flutter
+- Contact
+- Firebase Authentication
+- Phone number authentication
+- Microsoft Authentication
+- Firebase Real-TIme database
+- Use Firebase Real-Time database in a real app
+- Firebase Cloud Storage
+- Upload files
+- Firebase messaging
+- Push notifications
