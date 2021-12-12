@@ -41,7 +41,7 @@ class AccountTab extends StatelessWidget {
                           Text(
                             user.name != null ? user.name : 'Name is empty',
                             style: TextStyle(
-                              fontSize: 15,
+                              fontSize: 17,
                             ),
                           ),
                           SizedBox(height: 10),
