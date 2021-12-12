@@ -25,14 +25,14 @@ class ScreenSinglePost extends StatelessWidget {
             ),
             Divider(color: Colors.blue),
             Text(
-              post['content'],
+              post['context'],
             ),
             SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(
-                  '${post['user']}',
+                  '${post['userid']}',
                   style: TextStyle(
                     color: Colors.blue,
                     fontSize: 10,
