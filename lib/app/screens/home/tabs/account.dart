@@ -84,9 +84,7 @@ class AccountTab extends StatelessWidget {
                         ),
                         height: 75,
                       ),
-                      onPressed: () {
-                        print('Hi');
-                      },
+                      onPressed: () {},
                     ),
                     FlatButton(
                       child: Container(
@@ -95,14 +93,14 @@ class AccountTab extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             Text(
-                              '10',
+                              '6',
                               style: TextStyle(
                                 fontSize: 17,
                               ),
                             ),
                             SizedBox(height: 5),
                             Text(
-                              'Posts',
+                              'Followings',
                               style: TextStyle(
                                 fontSize: 12,
                               ),
@@ -111,9 +109,7 @@ class AccountTab extends StatelessWidget {
                         ),
                         height: 75,
                       ),
-                      onPressed: () {
-                        print('Hi');
-                      },
+                      onPressed: () {},
                     ),
                     FlatButton(
                       child: Container(
@@ -122,14 +118,14 @@ class AccountTab extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             Text(
-                              '10',
+                              '124K',
                               style: TextStyle(
                                 fontSize: 17,
                               ),
                             ),
                             SizedBox(height: 5),
                             Text(
-                              'Posts',
+                              'Followers',
                               style: TextStyle(
                                 fontSize: 12,
                               ),
@@ -138,16 +134,14 @@ class AccountTab extends StatelessWidget {
                         ),
                         height: 75,
                       ),
-                      onPressed: () {
-                        print('Hi');
-                      },
+                      onPressed: () {},
                     ),
                   ],
                 ),
               ],
             ),
           ),
-          Divider(color: Colors.blue),
+          Divider(color: Colors.deepOrange),
         ],
       ),
     );
