@@ -19,22 +19,22 @@ class ScreenSinglePost extends StatelessWidget {
             Text(
               post['title'],
               style: TextStyle(
-                color: Colors.blue,
+                color: Colors.deepOrange,
                 fontSize: 17,
               ),
             ),
-            Divider(color: Colors.blue),
+            Divider(color: Colors.deepOrange),
             Text(
               post['context'],
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 15),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(
                   '${post['userid']}',
                   style: TextStyle(
-                    color: Colors.blue,
+                    color: Colors.deepOrange,
                     fontSize: 10,
                   ),
                 ),
