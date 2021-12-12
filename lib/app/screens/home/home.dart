@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:multifirebaseauthentication/app/models/user.dart';
 import 'package:multifirebaseauthentication/app/screens/home/settings.dart';
+import 'package:multifirebaseauthentication/app/screens/home/tabs/account.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -10,6 +13,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    final user = Provider.of<User>(context);
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: DefaultTabController(
@@ -60,61 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Center(
                 child: Text('Plus'),
               ),
-              SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.all(20),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          CircleAvatar(
-                            radius: 50,
-                            backgroundColor: Colors.grey,
-                            // backgroundImage: NetworkImage(),
-                            child: FaIcon(
-                              FontAwesomeIcons.camera,
-                              color: Colors.white,
-                              size: 40,
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.all(8),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  'Amirhossein',
-                                  style: TextStyle(
-                                    fontSize: 22,
-                                  ),
-                                ),
-                                SizedBox(height: 5),
-                                Text(
-                                  'amir@gmail.com',
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                  ),
-                                ),
-                                SizedBox(height: 15),
-                                Text(
-                                  'Joined in Dec 12 2021',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Divider(color: Colors.blue),
-                  ],
-                ),
-              ),
+              AccountTab(),
             ],
           ),
         ),
