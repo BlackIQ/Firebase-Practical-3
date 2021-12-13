@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:multifirebaseauthentication/app/services/authentication.dart';
+import 'package:multifirebaseauthentication/app/widgets/buttons/auth_button.dart';
 import 'package:multifirebaseauthentication/app/widgets/buttons/icon_button.dart';
 import 'package:multifirebaseauthentication/app/widgets/buttons/wide_button.dart';
 import 'package:multifirebaseauthentication/app/widgets/fields/wide_field.dart';
@@ -131,37 +132,25 @@ class _AccountScreenState extends State<AccountScreen> {
                   child: Text('Or login with other accounts'),
                 ),
                 SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    SqIconButton(
-                      icon: FontAwesomeIcons.google,
-                      color: Colors.red,
-                      clicked: () async {
-                        dynamic result = await _auth.signinGoogle();
-                        if (result.runtimeType == List) {
-                          print(result[1]);
-                        }
-                      },
-                    ),
-                    SqIconButton(
-                      icon: FontAwesomeIcons.userSecret,
-                      color: Colors.grey,
-                      clicked: () async {
-                        dynamic result = await _auth.signinAnon();
-                        if (result.runtimeType == List) {
-                          print(result[1]);
-                        }
-                      },
-                    ),
-                    SqIconButton(
-                      icon: FontAwesomeIcons.userPlus,
-                      color: Colors.green,
-                      clicked: () {
-                        odalRegister();
-                      },
-                    ),
-                  ],
+                AuthIconButton(
+                  color: Colors.red,
+                  text: 'Continue with Google',
+                  icon: FontAwesomeIcons.google,
+                  clicked: () async {
+                    dynamic result = await _auth.signinGoogle();
+                    if (result.runtimeType == List) {
+                      print(result[1]);
+                    }
+                  },
+                ),
+                SizedBox(height: 10),
+                AuthIconButton(
+                  color: Colors.green,
+                  text: 'Register a new account',
+                  icon: FontAwesomeIcons.userPlus,
+                  clicked: () {
+                    odalRegister();
+                  },
                 ),
               ],
             ),
