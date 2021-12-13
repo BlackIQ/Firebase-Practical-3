@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:multifirebaseauthentication/app/models/user.dart';
 import 'package:multifirebaseauthentication/app/screens/home/settings.dart';
 import 'package:multifirebaseauthentication/app/screens/home/tabs/account.dart';
 import 'package:multifirebaseauthentication/app/screens/home/tabs/feed.dart';
 import 'package:multifirebaseauthentication/app/screens/home/tabs/add.dart';
-import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -15,8 +13,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    final user = Provider.of<User>(context);
-
     return MaterialApp(
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
