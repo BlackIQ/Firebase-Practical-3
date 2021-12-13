@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ScreenSinglePost extends StatelessWidget {
   ScreenSinglePost({
@@ -17,14 +18,6 @@ class ScreenSinglePost extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Text(
-              post['title'],
-              style: TextStyle(
-                color: Colors.deepOrange,
-                fontSize: 17,
-              ),
-            ),
-            Divider(color: Colors.deepOrange),
-            Text(
               post['context'],
             ),
             SizedBox(height: 15),
@@ -32,7 +25,7 @@ class ScreenSinglePost extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(
-                  '${post['userid']}',
+                  '${post['username']}',
                   style: TextStyle(
                     color: Colors.deepOrange,
                     fontSize: 10,
@@ -43,6 +36,20 @@ class ScreenSinglePost extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.grey,
                     fontSize: 10,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                GestureDetector(
+                  child: FaIcon(
+                    FontAwesomeIcons.solidHeart,
+                    // FontAwesomeIcons.heart,
+                    size: 15,
+                    color: Colors.red,
                   ),
                 ),
               ],
