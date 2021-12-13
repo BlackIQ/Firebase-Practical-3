@@ -31,7 +31,6 @@ But in this project we cover more lessons. Like:
 - Flutter
     - Theme and settings for theme
     - Dark and light mode
-    - Using GoogleFonts
 - Firebase Authentication
     - Apple Authentication
     - Github Authentication
