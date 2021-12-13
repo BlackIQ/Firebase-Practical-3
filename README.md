@@ -11,6 +11,7 @@ In previous practical projects ([Second Firebase Practical Project](https://gith
 - Flutter
     - Alert dialog for logout
     - Bottom navigation bar
+    - Using GoogleFonts
     - Settings to show user image and other stuff
 - Firebase setup
     - Setup for iOS
